@@ -6,6 +6,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## ✅ FEATURE SET
 
 **Core Features**
@@ -25,6 +26,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## 📦 DATA MODEL
 **Contact Fields:**
 |Field|	Data Type|
@@ -37,6 +39,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## 🗃️ STORAGE OPTIONS
 1. **Local File-Based Storage**
 - JSON – good for structured storage and human-readability
@@ -49,6 +52,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## 🧱 PROGRAM STRUCTURE (Modular Design)
 **Modules (Python Files or Classes)**
 |Title| Purpose|
@@ -61,6 +65,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## 🧪 FUNCTIONAL REQUIREMENTS
 
 **Each of these will be functions:**
@@ -74,6 +79,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## ✅ NON-FUNCTIONAL REQUIREMENTS / BEST PRACTICES
 - *Modularity* – Break code into small, reusable functions
 - *Separation of Concerns* – UI logic separate from business logic and storage
@@ -84,6 +90,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## 🔐 DATA VALIDATION RULES
 - Email must contain @ and a domain
 - Phone number should be in consistent format (e.g., (123) 456-7890 or 123-456-7890)
@@ -92,6 +99,7 @@ I am following programming best practices in this project.
 <br>
 <br>
 <br>
+
 ## 🎨 USER INTERFACE (Initial Plan)
 **CLI-Based Menu Example:**
 
