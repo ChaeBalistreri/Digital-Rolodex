@@ -1,11 +1,11 @@
 # Digital-Rolodex
-An address book which notifies of upcoming birthdays.
-#
-#
-#
-#
-
-
+I'm building a **Digital Rolodex (DR)** to help keep track of my personal and professional contacts. This exercise is to further familiarize myself with Python in a utilitarian manner. Normally, I would have to rely on social media or some external entity to keep track of when someone's birthday is. But with this DR, I will be able to see upcoming birthdays.
+<br>
+I am following programming best practices in this project.
+<br>
+<br>
+<br>
+<br>
 ## ✅ FEATURE SET
 
 **Core Features**
@@ -22,8 +22,9 @@ An address book which notifies of upcoming birthdays.
 - Reminder for upcoming birthdays
 - Duplicate detection
 - Tagging/categorization
-
-
+<br>
+<br>
+<br>
 ## 📦 DATA MODEL
 **Contact Fields:**
 |Field|	Data Type|
@@ -33,9 +34,9 @@ An address book which notifies of upcoming birthdays.
 |Phone Number|	String|
 |Email|	String|
 |Date of Birth|	Date (YYYY-MM-DD)|
-
-
-
+<br>
+<br>
+<br>
 ## 🗃️ STORAGE OPTIONS
 1. **Local File-Based Storage**
 - JSON – good for structured storage and human-readability
@@ -45,9 +46,9 @@ An address book which notifies of upcoming birthdays.
 
 2. **Cloud/External Database (optional, later stage)**
 - Not needed initially, but could be integrated later (e.g., Firebase, SQLite via web)
-
-
-
+<br>
+<br>
+<br>
 ## 🧱 PROGRAM STRUCTURE (Modular Design)
 **Modules (Python Files or Classes)**
 |Title| Purpose|
@@ -57,8 +58,9 @@ An address book which notifies of upcoming birthdays.
 |storage.py|handles saving/loading contacts from file (JSON or DB)|
 |utils.py|for helper functions (input validation, formatting)|
 |rolodex.py|core logic (add/edit/delete/search contacts)|
-
-
+<br>
+<br>
+<br>
 ## 🧪 FUNCTIONAL REQUIREMENTS
 
 **Each of these will be functions:**
@@ -69,7 +71,9 @@ An address book which notifies of upcoming birthdays.
 - search_contacts(query)
 - list_contacts()
 - save_contacts() and load_contacts()
-
+<br>
+<br>
+<br>
 ## ✅ NON-FUNCTIONAL REQUIREMENTS / BEST PRACTICES
 - *Modularity* – Break code into small, reusable functions
 - *Separation of Concerns* – UI logic separate from business logic and storage
@@ -77,13 +81,17 @@ An address book which notifies of upcoming birthdays.
 - *Error Handling* – Gracefully catch errors (e.g., file not found, invalid input)
 - *Documentation* – Docstrings and comments
 - *Version Control* – GitHub repository for tracking changes
-
+<br>
+<br>
+<br>
 ## 🔐 DATA VALIDATION RULES
 - Email must contain @ and a domain
 - Phone number should be in consistent format (e.g., (123) 456-7890 or 123-456-7890)
 - Date of Birth must be in ISO format (YYYY-MM-DD)
 - Name should not be empty
-
+<br>
+<br>
+<br>
 ## 🎨 USER INTERFACE (Initial Plan)
 **CLI-Based Menu Example:**
 
