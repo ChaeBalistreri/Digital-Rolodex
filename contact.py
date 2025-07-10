@@ -11,7 +11,7 @@ from datetime import datetime
 class Contact:
     """Blueprint for each contact in Digital Rolodex"""
 
-    def __init__(self, name, address, phone_num, email, birth_date ):
+    def __init__(self, name, address=None, phone_num=None, email=None, birth_date=None): # name is required, while all other parameters are optional
         self.name = name
         self.address = address
         self.phone_num = phone_num
