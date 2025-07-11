@@ -55,13 +55,13 @@ I am following programming best practices in this project.
 
 ## 🧱 PROGRAM STRUCTURE (Modular Design)
 **Modules (Python Files or Classes)**
-|Title| Purpose|
-|-----|--------|
-|main.py|entry point and UI handling|
-|contact.py|defines Contact class|
-|storage.py|handles saving/loading contacts from file (JSON or DB)|
-|utils.py|for helper functions (input validation, formatting)|
-|rolodex.py|core logic (add/edit/delete/search contacts)|
+|Title| Purpose|Complete|
+|-----|--------|--------|
+|main.py|entry point and UI handling| <center>  </center> |
+|contact.py|defines Contact class| <center> ✔ </center> |
+|storage.py|handles saving/loading contacts from file (JSON or DB)| <center>  </center> |
+|utils.py|for helper functions (input validation, formatting)| <center>  </center> |
+|rolodex.py|core logic (add/edit/delete/search contacts)| <center>  </center> |
 <br>
 <br>
 <br>
@@ -93,7 +93,7 @@ I am following programming best practices in this project.
 
 ## 🔐 DATA VALIDATION RULES
 - Email must contain @ and a domain
-- Phone number should be in consistent format (e.g., (123) 456-7890 or 123-456-7890)
+- Phone number should be in consistent format ( e.g., (123) 456-7890 or 123-456-7890 )
 - Date of Birth must be in ISO format (YYYY-MM-DD)
 - Name should not be empty
 <br>
