@@ -61,7 +61,7 @@ I am following programming best practices in this project.
 |contact.py|defines Contact class| <center> ✔ </center> |
 |storage.py|handles saving/loading contacts from file (JSON or DB)| <center> ✔ </center> |
 |utils.py|for helper functions (input validation, formatting)| <center>  </center> |
-|rolodex.py|core logic (add/edit/delete/search contacts)| <center>  </center> |
+|rolodex.py|core logic (add/edit/delete/search contacts)| <center> ✔ </center> |
 <br>
 <br>
 <br>
@@ -96,6 +96,7 @@ I am following programming best practices in this project.
 - Phone number should be in consistent format ( e.g., (123) 456-7890 or 123-456-7890 )
 - Date of Birth must be in ISO format (YYYY-MM-DD)
 - Storage requires name + email on load; missing required fields are skipped with a warning.
+- Emails are unique across contacts (case-insensitive); duplicates are rejected when adding or editing.
 <br>
 <br>
 <br>
@@ -119,3 +120,24 @@ Select an option: _
 - Purpose: Exercises the storage layer (`storage.py`).
 - Covers: UTF-8 JSON save/load round-trip, mixed inputs (Contact + dict), per-item robustness (skips malformed records), soft warnings for incomplete records, stricter policy (requires name + email), corrupt JSON handling, and atomic writes (no leftover `.tmp`).
 - Outcome: Current behavior passes. Warnings are emitted for incomplete or invalid inputs; corrupt files return an empty list without crashing.
+
+**Tests/rolodex_TestScript.py:**
+- Purpose: Exercises the Rolodex layer (`rolodex.py`).
+- Covers: Adding contacts (Contact + dict), unique email enforcement, sorted listing, case-insensitive lookup by email, partial/exact search across fields, editing (field updates, duplicate email rejection, validation), deleting, and persistence across reloads.
+- Outcome: Current behavior passes. All operations are validated and persisted; duplicates are correctly rejected.
+
+## 📝 RECENT CHANGES
+
+- storage.py
+  - Switched to UTF-8 with `ensure_ascii=False`; ensures parent directories exist.
+  - Robust per-item loading with logging; skips malformed entries without failing all.
+  - Atomic writes via temp file + `os.replace`; no leftover `.tmp` files.
+  - Replaced prints with `logging`; callers configure verbosity (e.g., in `main.py`).
+- contact.py
+  - `from_dict` now lenient: only requires `name`; other fields via `dict.get(...)`.
+  - Added `Contact.is_minimally_complete()` for soft completeness checks.
+- rolodex.py
+  - Added `Rolodex` class with `add_contact`, `list_contacts`, `get_by_email`, `search_contacts`, `view_contact`, `edit_contact`, and `delete_contact`.
+  - Enforces unique emails (case-insensitive) and validates email/DOB on edits.
+- Tests
+  - Added `Tests/storage_TestScript.py` and `Tests/rolodex_TestScript.py` covering the above behaviors.

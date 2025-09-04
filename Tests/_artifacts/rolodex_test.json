@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ada Lovelace",
+        "address": "10 Downing St, London",
+        "phone_num": "+44 20 7946 0991",
+        "email": "ada+dr@example.com",
+        "birth_date": "1815-12-10"
+    },
+    {
+        "name": "Grace Hopper",
+        "address": "Arlington National Cemetery, VA",
+        "phone_num": "+1 555 867-5309",
+        "email": "grace.hopper@nvlabs.mil",
+        "birth_date": "1906-12-09"
+    }
+]
