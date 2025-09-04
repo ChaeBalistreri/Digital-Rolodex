@@ -42,17 +42,37 @@ class Contact:
         }
     
     
+    def is_minimally_complete(self) -> bool:
+        """Return True if this contact has the minimally useful fields.
+
+        Policy:
+        - Name must be present (guaranteed by constructor usage)
+        - At least one reliable point of contact is present: email OR phone
+
+        Note: Storage may enforce stricter requirements (e.g., require email)
+        and skip records; this helper is used for soft warnings and UI hints.
+        """
+
+        return bool(self.name and (self.email or self.phone_num))
+
+    
     @classmethod
     def from_dict(cls, data):
         """This is a class method that reconstructs a Contact object from 
         a dictionary (e.g., one you loaded from JSON). cls means the method works on the class itself, not an instance."""
         
+        # Only require 'name'; use dict.get for optional fields with sensible defaults (None).
+        # This makes loading tolerant of partially filled records while keeping 'name' mandatory.
+        name = data.get("name")
+        if not name:
+            raise ValueError("Contact 'name' is required")
+
         return cls(
-            data["name"],
-            data["address"],
-            data["phone_num"],
-            data["email"],
-            data["birth_date"]
+            name=name,
+            address=data.get("address"),
+            phone_num=data.get("phone_num"),
+            email=data.get("email"),
+            birth_date=data.get("birth_date"),
         )
 
     

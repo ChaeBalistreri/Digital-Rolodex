@@ -59,7 +59,7 @@ I am following programming best practices in this project.
 |-----|--------|--------|
 |main.py|entry point and UI handling| <center>  </center> |
 |contact.py|defines Contact class| <center> ✔ </center> |
-|storage.py|handles saving/loading contacts from file (JSON or DB)| <center>  </center> |
+|storage.py|handles saving/loading contacts from file (JSON or DB)| <center> ✔ </center> |
 |utils.py|for helper functions (input validation, formatting)| <center>  </center> |
 |rolodex.py|core logic (add/edit/delete/search contacts)| <center>  </center> |
 <br>
@@ -95,7 +95,7 @@ I am following programming best practices in this project.
 - Email must contain @ and a domain
 - Phone number should be in consistent format ( e.g., (123) 456-7890 or 123-456-7890 )
 - Date of Birth must be in ISO format (YYYY-MM-DD)
-- Name should not be empty
+- Storage requires name + email on load; missing required fields are skipped with a warning.
 <br>
 <br>
 <br>
@@ -112,3 +112,10 @@ I am following programming best practices in this project.
 6. List all contacts
 7. Exit
 Select an option: _
+
+## 🧫 TEST SCRIPTS
+
+**Tests/storage_TestScript.py:**
+- Purpose: Exercises the storage layer (`storage.py`).
+- Covers: UTF-8 JSON save/load round-trip, mixed inputs (Contact + dict), per-item robustness (skips malformed records), soft warnings for incomplete records, stricter policy (requires name + email), corrupt JSON handling, and atomic writes (no leftover `.tmp`).
+- Outcome: Current behavior passes. Warnings are emitted for incomplete or invalid inputs; corrupt files return an empty list without crashing.
