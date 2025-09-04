@@ -112,7 +112,7 @@ I am following programming best practices in this project.
 5. Search contacts
 6. List all contacts
 7. Exit
-Select an option: _
+8. Select an option
 
 ## 🧫 TEST SCRIPTS
 
