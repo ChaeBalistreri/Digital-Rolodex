@@ -1,13 +1,1402 @@
 [
     {
-        "name": "Chae Bal",
-        "address": "123 Main St 75123",
-        "phone_num": "(555) 789-0123",
-        "email": "CB@me.com",
-        "birth_date": "1990-06-25",
-        "category": "Friends",
-        "notes": "Testing the note feature",
+        "name": "Avery Adams 1",
+        "address": "11 Maple Ave, Austin, TX 73001",
+        "phone_num": "(217) 213-1037",
+        "email": "avery.adams.1@example.test",
+        "birth_date": "1965-01-04",
+        "category": "Family",
+        "notes": "Synthetic test contact 1 for large-list search, sort, import, and export checks.",
         "favorite": false,
-        "tags": []
+        "tags": [
+            "coffee",
+            "local"
+        ]
+    },
+    {
+        "name": "Blake Hayes 2",
+        "address": "22 Cedar Lane, Dallas, TX 73002",
+        "phone_num": "(224) 226-1074",
+        "email": "blake.hayes.2@example.test",
+        "birth_date": "1970-02-07",
+        "category": "Friends",
+        "notes": "Synthetic test contact 2 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "priority"
+        ]
+    },
+    {
+        "name": "Casey Owens 3",
+        "address": "33 River Drive, Houston, TX 73003",
+        "phone_num": "(231) 239-1111",
+        "email": "casey.owens.3@example.test",
+        "birth_date": "1975-03-10",
+        "category": "Work",
+        "notes": "Synthetic test contact 3 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "training"
+        ]
+    },
+    {
+        "name": "Drew Vasquez 4",
+        "address": "44 Meadow Path, San Antonio, TX 73004",
+        "phone_num": "(238) 252-1148",
+        "email": "drew.vasquez.4@example.test",
+        "birth_date": "1980-04-13",
+        "category": "School",
+        "notes": "Synthetic test contact 4 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "referral"
+        ]
+    },
+    {
+        "name": "Emery Donovan 5",
+        "address": "55 Pine Road, Fort Worth, TX 73005",
+        "phone_num": "(245) 265-1185",
+        "email": "emery.donovan.5@example.test",
+        "birth_date": "1985-05-16",
+        "category": "Veteran",
+        "notes": "Synthetic test contact 5 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "mentor",
+            "travel"
+        ]
+    },
+    {
+        "name": "Finley Kim 6",
+        "address": "66 Willow Way, Plano, TX 73006",
+        "phone_num": "(252) 278-1222",
+        "email": "finley.kim.6@example.test",
+        "birth_date": "1990-06-19",
+        "category": "Other",
+        "notes": "Synthetic test contact 6 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "coffee",
+            "music"
+        ]
+    },
+    {
+        "name": "Gray Sutton 7",
+        "address": "77 Highland Terrace, Arlington, TX 73007",
+        "phone_num": "(259) 291-1259",
+        "email": "gray.sutton.7@example.test",
+        "birth_date": "1995-07-22",
+        "category": "Alumni",
+        "notes": "Synthetic test contact 7 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "sports"
+        ]
+    },
+    {
+        "name": "Harper Cole 8",
+        "address": "88 Oak Street, El Paso, TX 73008",
+        "phone_num": "(266) 304-1296",
+        "email": "harper.cole.8@example.test",
+        "birth_date": "2000-08-25",
+        "category": "Contractors",
+        "notes": "Synthetic test contact 8 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "remote",
+            "training"
+        ]
+    },
+    {
+        "name": "Indigo Garcia 9",
+        "address": "99 Birch Blvd, Waco, TX 73009",
+        "phone_num": "(273) 317-1333",
+        "email": "indigo.garcia.9@example.test",
+        "birth_date": "1960-09-01",
+        "category": "Mentors",
+        "notes": "Synthetic test contact 9 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "network",
+            "referral"
+        ]
+    },
+    {
+        "name": "Jordan Nguyen 10",
+        "address": "110 Sunset Court, Denton, TX 73010",
+        "phone_num": "(280) 330-1370",
+        "email": "jordan.nguyen.10@example.test",
+        "birth_date": "1965-10-04",
+        "category": "Neighbors",
+        "notes": "Synthetic test contact 10 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "travel"
+        ]
+    },
+    {
+        "name": "Kai Underwood 11",
+        "address": "121 Maple Ave, Austin, TX 73011",
+        "phone_num": "(287) 343-1407",
+        "email": "kai.underwood.11@example.test",
+        "birth_date": "1970-11-07",
+        "category": "Volunteers",
+        "notes": "Synthetic test contact 11 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "local",
+            "music"
+        ]
+    },
+    {
+        "name": "Logan Chambers 12",
+        "address": "132 Cedar Lane, Dallas, TX 73012",
+        "phone_num": "(294) 356-1444",
+        "email": "logan.chambers.12@example.test",
+        "birth_date": "1975-12-10",
+        "category": "Vendors",
+        "notes": "Synthetic test contact 12 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "priority",
+            "sports"
+        ]
+    },
+    {
+        "name": "Morgan Justice 13",
+        "address": "143 River Drive, Houston, TX 73013",
+        "phone_num": "(301) 369-1481",
+        "email": "morgan.justice.13@example.test",
+        "birth_date": "1980-01-13",
+        "category": "Healthcare",
+        "notes": "Synthetic test contact 13 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "remote"
+        ]
+    },
+    {
+        "name": "Nico Ramirez 14",
+        "address": "154 Meadow Path, San Antonio, TX 73014",
+        "phone_num": "(308) 382-1518",
+        "email": "nico.ramirez.14@example.test",
+        "birth_date": "1985-02-16",
+        "category": "Fitness",
+        "notes": "Synthetic test contact 14 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "network"
+        ]
+    },
+    {
+        "name": "Oakley Bishop 15",
+        "address": "165 Pine Road, Fort Worth, TX 73015",
+        "phone_num": "(315) 395-1555",
+        "email": "oakley.bishop.15@example.test",
+        "birth_date": "1990-03-19",
+        "category": "Community",
+        "notes": "Synthetic test contact 15 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "mentor"
+        ]
+    },
+    {
+        "name": "Parker Foster 16",
+        "address": "176 Willow Way, Plano, TX 73016",
+        "phone_num": "(322) 408-1592",
+        "email": "parker.foster.16@example.test",
+        "birth_date": "1995-04-22",
+        "category": "Family",
+        "notes": "Synthetic test contact 16 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "local"
+        ]
+    },
+    {
+        "name": "Quinn Morris 17",
+        "address": "187 Highland Terrace, Arlington, TX 73017",
+        "phone_num": "(329) 421-1629",
+        "email": "quinn.morris.17@example.test",
+        "birth_date": "2000-05-25",
+        "category": "Friends",
+        "notes": "Synthetic test contact 17 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "priority"
+        ]
+    },
+    {
+        "name": "Riley Turner 18",
+        "address": "198 Oak Street, El Paso, TX 73018",
+        "phone_num": "(336) 434-1666",
+        "email": "riley.turner.18@example.test",
+        "birth_date": "1960-06-01",
+        "category": "Work",
+        "notes": "Synthetic test contact 18 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "holiday-card",
+            "training"
+        ]
+    },
+    {
+        "name": "Sawyer Brooks 19",
+        "address": "209 Birch Blvd, Waco, TX 73019",
+        "phone_num": "(343) 447-1703",
+        "email": "sawyer.brooks.19@example.test",
+        "birth_date": "1965-07-04",
+        "category": "School",
+        "notes": "Synthetic test contact 19 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "referral"
+        ]
+    },
+    {
+        "name": "Taylor Ingram 20",
+        "address": "220 Sunset Court, Denton, TX 73020",
+        "phone_num": "(350) 460-1740",
+        "email": "taylor.ingram.20@example.test",
+        "birth_date": "1970-08-07",
+        "category": "Veteran",
+        "notes": "Synthetic test contact 20 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "mentor",
+            "travel"
+        ]
+    },
+    {
+        "name": "Uma Pierce 21",
+        "address": "231 Maple Ave, Austin, TX 73021",
+        "phone_num": "(357) 473-1777",
+        "email": "uma.pierce.21@example.test",
+        "birth_date": "1975-09-10",
+        "category": "Other",
+        "notes": "Synthetic test contact 21 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "music"
+        ]
+    },
+    {
+        "name": "Val Zhang 22",
+        "address": "242 Cedar Lane, Dallas, TX 73022",
+        "phone_num": "(364) 486-1814",
+        "email": "val.zhang.22@example.test",
+        "birth_date": "1980-10-13",
+        "category": "Alumni",
+        "notes": "Synthetic test contact 22 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "sports"
+        ]
+    },
+    {
+        "name": "Wren Ellis 23",
+        "address": "253 River Drive, Houston, TX 73023",
+        "phone_num": "(371) 499-1851",
+        "email": "wren.ellis.23@example.test",
+        "birth_date": "1985-11-16",
+        "category": "Contractors",
+        "notes": "Synthetic test contact 23 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "remote",
+            "training"
+        ]
+    },
+    {
+        "name": "Xander Lopez 24",
+        "address": "264 Meadow Path, San Antonio, TX 73024",
+        "phone_num": "(378) 512-1888",
+        "email": "xander.lopez.24@example.test",
+        "birth_date": "1990-12-19",
+        "category": "Mentors",
+        "notes": "Synthetic test contact 24 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "network",
+            "referral"
+        ]
+    },
+    {
+        "name": "Yael Stone 25",
+        "address": "275 Pine Road, Fort Worth, TX 73025",
+        "phone_num": "(385) 525-1925",
+        "email": "yael.stone.25@example.test",
+        "birth_date": "1995-01-22",
+        "category": "Neighbors",
+        "notes": "Synthetic test contact 25 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "travel"
+        ]
+    },
+    {
+        "name": "Zion Zimmerman 26",
+        "address": "286 Willow Way, Plano, TX 73026",
+        "phone_num": "(392) 538-1962",
+        "email": "zion.zimmerman.26@example.test",
+        "birth_date": "2000-02-25",
+        "category": "Volunteers",
+        "notes": "Synthetic test contact 26 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "local",
+            "music"
+        ]
+    },
+    {
+        "name": "Amara Hart 27",
+        "address": "297 Highland Terrace, Arlington, TX 73027",
+        "phone_num": "(399) 551-1999",
+        "email": "amara.hart.27@example.test",
+        "birth_date": "1960-03-01",
+        "category": "Vendors",
+        "notes": "Synthetic test contact 27 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "priority",
+            "sports"
+        ]
+    },
+    {
+        "name": "Bennett Ortiz 28",
+        "address": "308 Oak Street, El Paso, TX 73028",
+        "phone_num": "(406) 564-2036",
+        "email": "bennett.ortiz.28@example.test",
+        "birth_date": "1965-04-04",
+        "category": "Healthcare",
+        "notes": "Synthetic test contact 28 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "remote"
+        ]
+    },
+    {
+        "name": "Cleo York 29",
+        "address": "319 Birch Blvd, Waco, TX 73029",
+        "phone_num": "(413) 577-2073",
+        "email": "cleo.york.29@example.test",
+        "birth_date": "1970-05-07",
+        "category": "Fitness",
+        "notes": "Synthetic test contact 29 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "network"
+        ]
+    },
+    {
+        "name": "Dante Diaz 30",
+        "address": "330 Sunset Court, Denton, TX 73030",
+        "phone_num": "(420) 590-2110",
+        "email": "dante.diaz.30@example.test",
+        "birth_date": "1975-06-10",
+        "category": "Community",
+        "notes": "Synthetic test contact 30 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "follow-up",
+            "mentor"
+        ]
+    },
+    {
+        "name": "Elise Keller 31",
+        "address": "341 Maple Ave, Austin, TX 73031",
+        "phone_num": "(427) 603-2147",
+        "email": "elise.keller.31@example.test",
+        "birth_date": "1980-07-13",
+        "category": "Family",
+        "notes": "Synthetic test contact 31 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "local"
+        ]
+    },
+    {
+        "name": "Felix Rivera 32",
+        "address": "352 Cedar Lane, Dallas, TX 73032",
+        "phone_num": "(434) 616-2184",
+        "email": "felix.rivera.32@example.test",
+        "birth_date": "1985-08-16",
+        "category": "Friends",
+        "notes": "Synthetic test contact 32 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "priority"
+        ]
+    },
+    {
+        "name": "Gia Young 33",
+        "address": "363 River Drive, Houston, TX 73033",
+        "phone_num": "(441) 629-2221",
+        "email": "gia.young.33@example.test",
+        "birth_date": "1990-09-19",
+        "category": "Work",
+        "notes": "Synthetic test contact 33 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "training"
+        ]
+    },
+    {
+        "name": "Holden Gibson 34",
+        "address": "374 Meadow Path, San Antonio, TX 73034",
+        "phone_num": "(448) 642-2258",
+        "email": "holden.gibson.34@example.test",
+        "birth_date": "1995-10-22",
+        "category": "School",
+        "notes": "Synthetic test contact 34 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "referral"
+        ]
+    },
+    {
+        "name": "Iris Nolan 35",
+        "address": "385 Pine Road, Fort Worth, TX 73035",
+        "phone_num": "(455) 655-2295",
+        "email": "iris.nolan.35@example.test",
+        "birth_date": "2000-11-25",
+        "category": "Veteran",
+        "notes": "Synthetic test contact 35 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "mentor",
+            "travel"
+        ]
+    },
+    {
+        "name": "Jules West 36",
+        "address": "396 Willow Way, Plano, TX 73036",
+        "phone_num": "(462) 668-2332",
+        "email": "jules.west.36@example.test",
+        "birth_date": "1960-12-01",
+        "category": "Other",
+        "notes": "Synthetic test contact 36 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "coffee",
+            "music"
+        ]
+    },
+    {
+        "name": "Keira Carter 37",
+        "address": "407 Highland Terrace, Arlington, TX 73037",
+        "phone_num": "(469) 681-2369",
+        "email": "keira.carter.37@example.test",
+        "birth_date": "1965-01-04",
+        "category": "Alumni",
+        "notes": "Synthetic test contact 37 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "sports"
+        ]
+    },
+    {
+        "name": "Luca Jacobs 38",
+        "address": "418 Oak Street, El Paso, TX 73038",
+        "phone_num": "(476) 694-2406",
+        "email": "luca.jacobs.38@example.test",
+        "birth_date": "1970-02-07",
+        "category": "Contractors",
+        "notes": "Synthetic test contact 38 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "remote",
+            "training"
+        ]
+    },
+    {
+        "name": "Maya Quincy 39",
+        "address": "429 Birch Blvd, Waco, TX 73039",
+        "phone_num": "(483) 707-2443",
+        "email": "maya.quincy.39@example.test",
+        "birth_date": "1975-03-10",
+        "category": "Mentors",
+        "notes": "Synthetic test contact 39 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "network",
+            "referral"
+        ]
+    },
+    {
+        "name": "Noel Xu 40",
+        "address": "440 Sunset Court, Denton, TX 73040",
+        "phone_num": "(490) 720-2480",
+        "email": "noel.xu.40@example.test",
+        "birth_date": "1980-04-13",
+        "category": "Neighbors",
+        "notes": "Synthetic test contact 40 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "travel"
+        ]
+    },
+    {
+        "name": "Opal Fields 41",
+        "address": "451 Maple Ave, Austin, TX 73041",
+        "phone_num": "(497) 733-2517",
+        "email": "opal.fields.41@example.test",
+        "birth_date": "1985-05-16",
+        "category": "Volunteers",
+        "notes": "Synthetic test contact 41 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "local",
+            "music"
+        ]
+    },
+    {
+        "name": "Priya Mitchell 42",
+        "address": "462 Cedar Lane, Dallas, TX 73042",
+        "phone_num": "(504) 746-2554",
+        "email": "priya.mitchell.42@example.test",
+        "birth_date": "1990-06-19",
+        "category": "Vendors",
+        "notes": "Synthetic test contact 42 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "priority",
+            "sports"
+        ]
+    },
+    {
+        "name": "Reed Vaughn 43",
+        "address": "473 River Drive, Houston, TX 73043",
+        "phone_num": "(511) 759-2591",
+        "email": "reed.vaughn.43@example.test",
+        "birth_date": "1995-07-22",
+        "category": "Healthcare",
+        "notes": "Synthetic test contact 43 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "remote"
+        ]
+    },
+    {
+        "name": "Sage Baker 44",
+        "address": "484 Meadow Path, San Antonio, TX 73044",
+        "phone_num": "(518) 772-2628",
+        "email": "sage.baker.44@example.test",
+        "birth_date": "2000-08-25",
+        "category": "Fitness",
+        "notes": "Synthetic test contact 44 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "network"
+        ]
+    },
+    {
+        "name": "Tessa Iverson 45",
+        "address": "495 Pine Road, Fort Worth, TX 73045",
+        "phone_num": "(525) 785-2665",
+        "email": "tessa.iverson.45@example.test",
+        "birth_date": "1960-09-01",
+        "category": "Community",
+        "notes": "Synthetic test contact 45 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "mentor"
+        ]
+    },
+    {
+        "name": "Uri Patel 46",
+        "address": "506 Willow Way, Plano, TX 73046",
+        "phone_num": "(532) 798-2702",
+        "email": "uri.patel.46@example.test",
+        "birth_date": "1965-10-04",
+        "category": "Family",
+        "notes": "Synthetic test contact 46 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "local"
+        ]
+    },
+    {
+        "name": "Vera Walker 47",
+        "address": "517 Highland Terrace, Arlington, TX 73047",
+        "phone_num": "(539) 811-2739",
+        "email": "vera.walker.47@example.test",
+        "birth_date": "1970-11-07",
+        "category": "Friends",
+        "notes": "Synthetic test contact 47 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "priority"
+        ]
+    },
+    {
+        "name": "Wyatt Everett 48",
+        "address": "528 Oak Street, El Paso, TX 73048",
+        "phone_num": "(546) 824-2776",
+        "email": "wyatt.everett.48@example.test",
+        "birth_date": "1975-12-10",
+        "category": "Work",
+        "notes": "Synthetic test contact 48 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "holiday-card",
+            "training"
+        ]
+    },
+    {
+        "name": "Yara Lawson 49",
+        "address": "539 Birch Blvd, Waco, TX 73049",
+        "phone_num": "(553) 837-2813",
+        "email": "yara.lawson.49@example.test",
+        "birth_date": "1980-01-13",
+        "category": "School",
+        "notes": "Synthetic test contact 49 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "referral"
+        ]
+    },
+    {
+        "name": "Zane Tran 50",
+        "address": "550 Sunset Court, Denton, TX 73050",
+        "phone_num": "(560) 850-2850",
+        "email": "zane.tran.50@example.test",
+        "birth_date": "1985-02-16",
+        "category": "Veteran",
+        "notes": "Synthetic test contact 50 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "mentor",
+            "travel"
+        ]
+    },
+    {
+        "name": "Avery Adams 51",
+        "address": "561 Maple Ave, Austin, TX 73051",
+        "phone_num": "(567) 863-2887",
+        "email": "avery.adams.51@example.test",
+        "birth_date": "1990-03-19",
+        "category": "Other",
+        "notes": "Synthetic test contact 51 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "music"
+        ]
+    },
+    {
+        "name": "Blake Hayes 52",
+        "address": "572 Cedar Lane, Dallas, TX 73052",
+        "phone_num": "(574) 876-2924",
+        "email": "blake.hayes.52@example.test",
+        "birth_date": "1995-04-22",
+        "category": "Alumni",
+        "notes": "Synthetic test contact 52 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "sports"
+        ]
+    },
+    {
+        "name": "Casey Owens 53",
+        "address": "583 River Drive, Houston, TX 73053",
+        "phone_num": "(581) 889-2961",
+        "email": "casey.owens.53@example.test",
+        "birth_date": "2000-05-25",
+        "category": "Contractors",
+        "notes": "Synthetic test contact 53 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "remote",
+            "training"
+        ]
+    },
+    {
+        "name": "Drew Vasquez 54",
+        "address": "594 Meadow Path, San Antonio, TX 73054",
+        "phone_num": "(588) 202-2998",
+        "email": "drew.vasquez.54@example.test",
+        "birth_date": "1960-06-01",
+        "category": "Mentors",
+        "notes": "Synthetic test contact 54 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "network",
+            "referral"
+        ]
+    },
+    {
+        "name": "Emery Donovan 55",
+        "address": "605 Pine Road, Fort Worth, TX 73055",
+        "phone_num": "(595) 215-3035",
+        "email": "emery.donovan.55@example.test",
+        "birth_date": "1965-07-04",
+        "category": "Neighbors",
+        "notes": "Synthetic test contact 55 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "travel"
+        ]
+    },
+    {
+        "name": "Finley Kim 56",
+        "address": "616 Willow Way, Plano, TX 73056",
+        "phone_num": "(602) 228-3072",
+        "email": "finley.kim.56@example.test",
+        "birth_date": "1970-08-07",
+        "category": "Volunteers",
+        "notes": "Synthetic test contact 56 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "local",
+            "music"
+        ]
+    },
+    {
+        "name": "Gray Sutton 57",
+        "address": "627 Highland Terrace, Arlington, TX 73057",
+        "phone_num": "(609) 241-3109",
+        "email": "gray.sutton.57@example.test",
+        "birth_date": "1975-09-10",
+        "category": "Vendors",
+        "notes": "Synthetic test contact 57 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "priority",
+            "sports"
+        ]
+    },
+    {
+        "name": "Harper Cole 58",
+        "address": "638 Oak Street, El Paso, TX 73058",
+        "phone_num": "(616) 254-3146",
+        "email": "harper.cole.58@example.test",
+        "birth_date": "1980-10-13",
+        "category": "Healthcare",
+        "notes": "Synthetic test contact 58 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "remote"
+        ]
+    },
+    {
+        "name": "Indigo Garcia 59",
+        "address": "649 Birch Blvd, Waco, TX 73059",
+        "phone_num": "(623) 267-3183",
+        "email": "indigo.garcia.59@example.test",
+        "birth_date": "1985-11-16",
+        "category": "Fitness",
+        "notes": "Synthetic test contact 59 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "network"
+        ]
+    },
+    {
+        "name": "Jordan Nguyen 60",
+        "address": "660 Sunset Court, Denton, TX 73060",
+        "phone_num": "(630) 280-3220",
+        "email": "jordan.nguyen.60@example.test",
+        "birth_date": "1990-12-19",
+        "category": "Community",
+        "notes": "Synthetic test contact 60 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "follow-up",
+            "mentor"
+        ]
+    },
+    {
+        "name": "Kai Underwood 61",
+        "address": "671 Maple Ave, Austin, TX 73061",
+        "phone_num": "(637) 293-3257",
+        "email": "kai.underwood.61@example.test",
+        "birth_date": "1995-01-22",
+        "category": "Family",
+        "notes": "Synthetic test contact 61 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "local"
+        ]
+    },
+    {
+        "name": "Logan Chambers 62",
+        "address": "682 Cedar Lane, Dallas, TX 73062",
+        "phone_num": "(644) 306-3294",
+        "email": "logan.chambers.62@example.test",
+        "birth_date": "2000-02-25",
+        "category": "Friends",
+        "notes": "Synthetic test contact 62 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "priority"
+        ]
+    },
+    {
+        "name": "Morgan Justice 63",
+        "address": "693 River Drive, Houston, TX 73063",
+        "phone_num": "(651) 319-3331",
+        "email": "morgan.justice.63@example.test",
+        "birth_date": "1960-03-01",
+        "category": "Work",
+        "notes": "Synthetic test contact 63 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "training"
+        ]
+    },
+    {
+        "name": "Nico Ramirez 64",
+        "address": "704 Meadow Path, San Antonio, TX 73064",
+        "phone_num": "(658) 332-3368",
+        "email": "nico.ramirez.64@example.test",
+        "birth_date": "1965-04-04",
+        "category": "School",
+        "notes": "Synthetic test contact 64 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "referral"
+        ]
+    },
+    {
+        "name": "Oakley Bishop 65",
+        "address": "715 Pine Road, Fort Worth, TX 73065",
+        "phone_num": "(665) 345-3405",
+        "email": "oakley.bishop.65@example.test",
+        "birth_date": "1970-05-07",
+        "category": "Veteran",
+        "notes": "Synthetic test contact 65 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "mentor",
+            "travel"
+        ]
+    },
+    {
+        "name": "Parker Foster 66",
+        "address": "726 Willow Way, Plano, TX 73066",
+        "phone_num": "(672) 358-3442",
+        "email": "parker.foster.66@example.test",
+        "birth_date": "1975-06-10",
+        "category": "Other",
+        "notes": "Synthetic test contact 66 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "coffee",
+            "music"
+        ]
+    },
+    {
+        "name": "Quinn Morris 67",
+        "address": "737 Highland Terrace, Arlington, TX 73067",
+        "phone_num": "(679) 371-3479",
+        "email": "quinn.morris.67@example.test",
+        "birth_date": "1980-07-13",
+        "category": "Alumni",
+        "notes": "Synthetic test contact 67 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "sports"
+        ]
+    },
+    {
+        "name": "Riley Turner 68",
+        "address": "748 Oak Street, El Paso, TX 73068",
+        "phone_num": "(686) 384-3516",
+        "email": "riley.turner.68@example.test",
+        "birth_date": "1985-08-16",
+        "category": "Contractors",
+        "notes": "Synthetic test contact 68 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "remote",
+            "training"
+        ]
+    },
+    {
+        "name": "Sawyer Brooks 69",
+        "address": "759 Birch Blvd, Waco, TX 73069",
+        "phone_num": "(693) 397-3553",
+        "email": "sawyer.brooks.69@example.test",
+        "birth_date": "1990-09-19",
+        "category": "Mentors",
+        "notes": "Synthetic test contact 69 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "network",
+            "referral"
+        ]
+    },
+    {
+        "name": "Taylor Ingram 70",
+        "address": "770 Sunset Court, Denton, TX 73070",
+        "phone_num": "(700) 410-3590",
+        "email": "taylor.ingram.70@example.test",
+        "birth_date": "1995-10-22",
+        "category": "Neighbors",
+        "notes": "Synthetic test contact 70 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "travel"
+        ]
+    },
+    {
+        "name": "Uma Pierce 71",
+        "address": "781 Maple Ave, Austin, TX 73071",
+        "phone_num": "(707) 423-3627",
+        "email": "uma.pierce.71@example.test",
+        "birth_date": "2000-11-25",
+        "category": "Volunteers",
+        "notes": "Synthetic test contact 71 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "local",
+            "music"
+        ]
+    },
+    {
+        "name": "Val Zhang 72",
+        "address": "792 Cedar Lane, Dallas, TX 73072",
+        "phone_num": "(714) 436-3664",
+        "email": "val.zhang.72@example.test",
+        "birth_date": "1960-12-01",
+        "category": "Vendors",
+        "notes": "Synthetic test contact 72 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "priority",
+            "sports"
+        ]
+    },
+    {
+        "name": "Wren Ellis 73",
+        "address": "803 River Drive, Houston, TX 73073",
+        "phone_num": "(721) 449-3701",
+        "email": "wren.ellis.73@example.test",
+        "birth_date": "1965-01-04",
+        "category": "Healthcare",
+        "notes": "Synthetic test contact 73 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "remote"
+        ]
+    },
+    {
+        "name": "Xander Lopez 74",
+        "address": "814 Meadow Path, San Antonio, TX 73074",
+        "phone_num": "(728) 462-3738",
+        "email": "xander.lopez.74@example.test",
+        "birth_date": "1970-02-07",
+        "category": "Fitness",
+        "notes": "Synthetic test contact 74 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "network"
+        ]
+    },
+    {
+        "name": "Yael Stone 75",
+        "address": "825 Pine Road, Fort Worth, TX 73075",
+        "phone_num": "(735) 475-3775",
+        "email": "yael.stone.75@example.test",
+        "birth_date": "1975-03-10",
+        "category": "Community",
+        "notes": "Synthetic test contact 75 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "mentor"
+        ]
+    },
+    {
+        "name": "Zion Zimmerman 76",
+        "address": "836 Willow Way, Plano, TX 73076",
+        "phone_num": "(742) 488-3812",
+        "email": "zion.zimmerman.76@example.test",
+        "birth_date": "1980-04-13",
+        "category": "Family",
+        "notes": "Synthetic test contact 76 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "local"
+        ]
+    },
+    {
+        "name": "Amara Hart 77",
+        "address": "847 Highland Terrace, Arlington, TX 73077",
+        "phone_num": "(749) 501-3849",
+        "email": "amara.hart.77@example.test",
+        "birth_date": "1985-05-16",
+        "category": "Friends",
+        "notes": "Synthetic test contact 77 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "priority"
+        ]
+    },
+    {
+        "name": "Bennett Ortiz 78",
+        "address": "858 Oak Street, El Paso, TX 73078",
+        "phone_num": "(756) 514-3886",
+        "email": "bennett.ortiz.78@example.test",
+        "birth_date": "1990-06-19",
+        "category": "Work",
+        "notes": "Synthetic test contact 78 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "holiday-card",
+            "training"
+        ]
+    },
+    {
+        "name": "Cleo York 79",
+        "address": "869 Birch Blvd, Waco, TX 73079",
+        "phone_num": "(763) 527-3923",
+        "email": "cleo.york.79@example.test",
+        "birth_date": "1995-07-22",
+        "category": "School",
+        "notes": "Synthetic test contact 79 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "referral"
+        ]
+    },
+    {
+        "name": "Dante Diaz 80",
+        "address": "880 Sunset Court, Denton, TX 73080",
+        "phone_num": "(770) 540-3960",
+        "email": "dante.diaz.80@example.test",
+        "birth_date": "2000-08-25",
+        "category": "Veteran",
+        "notes": "Synthetic test contact 80 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "mentor",
+            "travel"
+        ]
+    },
+    {
+        "name": "Elise Keller 81",
+        "address": "891 Maple Ave, Austin, TX 73081",
+        "phone_num": "(777) 553-3997",
+        "email": "elise.keller.81@example.test",
+        "birth_date": "1960-09-01",
+        "category": "Other",
+        "notes": "Synthetic test contact 81 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "music"
+        ]
+    },
+    {
+        "name": "Felix Rivera 82",
+        "address": "902 Cedar Lane, Dallas, TX 73082",
+        "phone_num": "(784) 566-4034",
+        "email": "felix.rivera.82@example.test",
+        "birth_date": "1965-10-04",
+        "category": "Alumni",
+        "notes": "Synthetic test contact 82 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "sports"
+        ]
+    },
+    {
+        "name": "Gia Young 83",
+        "address": "913 River Drive, Houston, TX 73083",
+        "phone_num": "(791) 579-4071",
+        "email": "gia.young.83@example.test",
+        "birth_date": "1970-11-07",
+        "category": "Contractors",
+        "notes": "Synthetic test contact 83 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "remote",
+            "training"
+        ]
+    },
+    {
+        "name": "Holden Gibson 84",
+        "address": "924 Meadow Path, San Antonio, TX 73084",
+        "phone_num": "(798) 592-4108",
+        "email": "holden.gibson.84@example.test",
+        "birth_date": "1975-12-10",
+        "category": "Mentors",
+        "notes": "Synthetic test contact 84 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "network",
+            "referral"
+        ]
+    },
+    {
+        "name": "Iris Nolan 85",
+        "address": "935 Pine Road, Fort Worth, TX 73085",
+        "phone_num": "(805) 605-4145",
+        "email": "iris.nolan.85@example.test",
+        "birth_date": "1980-01-13",
+        "category": "Neighbors",
+        "notes": "Synthetic test contact 85 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "travel"
+        ]
+    },
+    {
+        "name": "Jules West 86",
+        "address": "946 Willow Way, Plano, TX 73086",
+        "phone_num": "(812) 618-4182",
+        "email": "jules.west.86@example.test",
+        "birth_date": "1985-02-16",
+        "category": "Volunteers",
+        "notes": "Synthetic test contact 86 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "local",
+            "music"
+        ]
+    },
+    {
+        "name": "Keira Carter 87",
+        "address": "957 Highland Terrace, Arlington, TX 73087",
+        "phone_num": "(819) 631-4219",
+        "email": "keira.carter.87@example.test",
+        "birth_date": "1990-03-19",
+        "category": "Vendors",
+        "notes": "Synthetic test contact 87 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "priority",
+            "sports"
+        ]
+    },
+    {
+        "name": "Luca Jacobs 88",
+        "address": "968 Oak Street, El Paso, TX 73088",
+        "phone_num": "(826) 644-4256",
+        "email": "luca.jacobs.88@example.test",
+        "birth_date": "1995-04-22",
+        "category": "Healthcare",
+        "notes": "Synthetic test contact 88 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "remote"
+        ]
+    },
+    {
+        "name": "Maya Quincy 89",
+        "address": "979 Birch Blvd, Waco, TX 73089",
+        "phone_num": "(833) 657-4293",
+        "email": "maya.quincy.89@example.test",
+        "birth_date": "2000-05-25",
+        "category": "Fitness",
+        "notes": "Synthetic test contact 89 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "network"
+        ]
+    },
+    {
+        "name": "Noel Xu 90",
+        "address": "990 Sunset Court, Denton, TX 73090",
+        "phone_num": "(840) 670-4330",
+        "email": "noel.xu.90@example.test",
+        "birth_date": "1960-06-01",
+        "category": "Community",
+        "notes": "Synthetic test contact 90 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "follow-up",
+            "mentor"
+        ]
+    },
+    {
+        "name": "Opal Fields 91",
+        "address": "1001 Maple Ave, Austin, TX 73091",
+        "phone_num": "(847) 683-4367",
+        "email": "opal.fields.91@example.test",
+        "birth_date": "1965-07-04",
+        "category": "Family",
+        "notes": "Synthetic test contact 91 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "coffee",
+            "local"
+        ]
+    },
+    {
+        "name": "Priya Mitchell 92",
+        "address": "1012 Cedar Lane, Dallas, TX 73092",
+        "phone_num": "(854) 696-4404",
+        "email": "priya.mitchell.92@example.test",
+        "birth_date": "1970-08-07",
+        "category": "Friends",
+        "notes": "Synthetic test contact 92 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "priority"
+        ]
+    },
+    {
+        "name": "Reed Vaughn 93",
+        "address": "1023 River Drive, Houston, TX 73093",
+        "phone_num": "(861) 709-4441",
+        "email": "reed.vaughn.93@example.test",
+        "birth_date": "1975-09-10",
+        "category": "Work",
+        "notes": "Synthetic test contact 93 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "holiday-card",
+            "training"
+        ]
+    },
+    {
+        "name": "Sage Baker 94",
+        "address": "1034 Meadow Path, San Antonio, TX 73094",
+        "phone_num": "(868) 722-4478",
+        "email": "sage.baker.94@example.test",
+        "birth_date": "1980-10-13",
+        "category": "School",
+        "notes": "Synthetic test contact 94 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "client",
+            "referral"
+        ]
+    },
+    {
+        "name": "Tessa Iverson 95",
+        "address": "1045 Pine Road, Fort Worth, TX 73095",
+        "phone_num": "(875) 735-4515",
+        "email": "tessa.iverson.95@example.test",
+        "birth_date": "1985-11-16",
+        "category": "Veteran",
+        "notes": "Synthetic test contact 95 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "mentor",
+            "travel"
+        ]
+    },
+    {
+        "name": "Uri Patel 96",
+        "address": "1056 Willow Way, Plano, TX 73096",
+        "phone_num": "(882) 748-4552",
+        "email": "uri.patel.96@example.test",
+        "birth_date": "1990-12-19",
+        "category": "Other",
+        "notes": "Synthetic test contact 96 for large-list search, sort, import, and export checks.",
+        "favorite": true,
+        "tags": [
+            "coffee",
+            "music"
+        ]
+    },
+    {
+        "name": "Vera Walker 97",
+        "address": "1067 Highland Terrace, Arlington, TX 73097",
+        "phone_num": "(889) 761-4589",
+        "email": "vera.walker.97@example.test",
+        "birth_date": "1995-01-22",
+        "category": "Alumni",
+        "notes": "Synthetic test contact 97 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "book-club",
+            "sports"
+        ]
+    },
+    {
+        "name": "Wyatt Everett 98",
+        "address": "1078 Oak Street, El Paso, TX 73098",
+        "phone_num": "(896) 774-4626",
+        "email": "wyatt.everett.98@example.test",
+        "birth_date": "2000-02-25",
+        "category": "Contractors",
+        "notes": "Synthetic test contact 98 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "remote",
+            "training"
+        ]
+    },
+    {
+        "name": "Yara Lawson 99",
+        "address": "1089 Birch Blvd, Waco, TX 73099",
+        "phone_num": "(903) 787-4663",
+        "email": "yara.lawson.99@example.test",
+        "birth_date": "1960-03-01",
+        "category": "Mentors",
+        "notes": "Synthetic test contact 99 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "network",
+            "referral"
+        ]
+    },
+    {
+        "name": "Zane Tran 100",
+        "address": "1100 Sunset Court, Denton, TX 73100",
+        "phone_num": "(210) 800-4700",
+        "email": "zane.tran.100@example.test",
+        "birth_date": "1965-04-04",
+        "category": "Neighbors",
+        "notes": "Synthetic test contact 100 for large-list search, sort, import, and export checks.",
+        "favorite": false,
+        "tags": [
+            "follow-up",
+            "travel"
+        ]
     }
 ]

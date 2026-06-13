@@ -303,6 +303,11 @@ Covers: live phone-entry formatting, `YYYY-MM-DD` to `DD/MM/YYYY` birthday conve
 - Updated all GUI birthday fields to display and accept forward-slash dates.
 - Kept backend storage in `YYYY-MM-DD` and expanded GUI conversion helpers so slash dates like `06/20/2000` save correctly.
 
+### 2026-06-13 Contact List Horizontal Scrolling
+
+- Expanded the main-window contact list into a wider table with name, email, phone, birthday, category, favorite, address, and notes columns.
+- Added a horizontal scrollbar so wide contact rows can be viewed side-to-side.
+
 ## Verification Log
 
 Last verified on 2026-06-12:

@@ -150,15 +150,17 @@ class DigitalRolodexApp:
 
         self.main_pane = ttk.PanedWindow(self.root, orient=tk.HORIZONTAL)
         self.main_pane.grid(row=0, column=0, sticky="nsew", padx=8, pady=8)
+        self.main_pane.bind("<Configure>", self._keep_contact_browser_half_width)
 
         self.left_panel = ttk.Frame(self.main_pane, padding=8)
         self.right_panel = ttk.Frame(self.main_pane, padding=8)
         self.main_pane.add(self.left_panel, weight=1)
-        self.main_pane.add(self.right_panel, weight=2)
+        self.main_pane.add(self.right_panel, weight=1)
 
         self._build_left_panel()
         self._build_detail_panel()
         self._build_bottom_panel()
+        self.root.after_idle(self._set_initial_pane_sizes)
 
     def _build_menu(self) -> None:
         menu_bar = tk.Menu(self.root)
@@ -237,20 +239,32 @@ class DigitalRolodexApp:
         tree_frame.columnconfigure(0, weight=1)
         tree_frame.rowconfigure(0, weight=1)
 
-        columns = ("name", "email", "phone")
+        columns = ("name", "email", "phone", "birthday", "category", "favorite", "address", "notes")
         self.contact_tree = ttk.Treeview(tree_frame, columns=columns, show="headings", selectmode="browse")
         self.contact_tree.heading("name", text="Name")
         self.contact_tree.heading("email", text="Email")
         self.contact_tree.heading("phone", text="Phone")
-        self.contact_tree.column("name", width=140, anchor="w")
-        self.contact_tree.column("email", width=180, anchor="w")
-        self.contact_tree.column("phone", width=120, anchor="w")
+        self.contact_tree.heading("birthday", text="Birthday")
+        self.contact_tree.heading("category", text="Category")
+        self.contact_tree.heading("favorite", text="Favorite")
+        self.contact_tree.heading("address", text="Address")
+        self.contact_tree.heading("notes", text="Notes")
+        self.contact_tree.column("name", width=160, minwidth=120, anchor="w", stretch=False)
+        self.contact_tree.column("email", width=220, minwidth=160, anchor="w", stretch=False)
+        self.contact_tree.column("phone", width=130, minwidth=110, anchor="w", stretch=False)
+        self.contact_tree.column("birthday", width=110, minwidth=100, anchor="w", stretch=False)
+        self.contact_tree.column("category", width=130, minwidth=100, anchor="w", stretch=False)
+        self.contact_tree.column("favorite", width=80, minwidth=70, anchor="center", stretch=False)
+        self.contact_tree.column("address", width=260, minwidth=180, anchor="w", stretch=False)
+        self.contact_tree.column("notes", width=320, minwidth=180, anchor="w", stretch=False)
         self.contact_tree.grid(row=0, column=0, sticky="nsew")
         self.contact_tree.bind("<<TreeviewSelect>>", self._on_contact_selected)
 
-        scrollbar = ttk.Scrollbar(tree_frame, orient=tk.VERTICAL, command=self.contact_tree.yview)
-        scrollbar.grid(row=0, column=1, sticky="ns")
-        self.contact_tree.configure(yscrollcommand=scrollbar.set)
+        y_scrollbar = ttk.Scrollbar(tree_frame, orient=tk.VERTICAL, command=self.contact_tree.yview)
+        y_scrollbar.grid(row=0, column=1, sticky="ns")
+        x_scrollbar = ttk.Scrollbar(tree_frame, orient=tk.HORIZONTAL, command=self.contact_tree.xview)
+        x_scrollbar.grid(row=1, column=0, sticky="ew")
+        self.contact_tree.configure(yscrollcommand=y_scrollbar.set, xscrollcommand=x_scrollbar.set)
 
         buttons = ttk.Frame(self.left_panel)
         buttons.grid(row=6, column=0, sticky="ew", pady=(8, 0))
@@ -318,6 +332,22 @@ class DigitalRolodexApp:
         self._refresh_contact_list()
         self._refresh_birthday_summary()
 
+    def _set_initial_pane_sizes(self) -> None:
+        """Place the contact browser and detail panel in an even split."""
+        self._set_contact_browser_half_width()
+
+    def _keep_contact_browser_half_width(self, _event=None) -> None:
+        """Keep the contact browser at half the main pane width as the window resizes."""
+        self.root.after_idle(self._set_contact_browser_half_width)
+
+    def _set_contact_browser_half_width(self) -> None:
+        try:
+            width = self.main_pane.winfo_width()
+            if width > 1:
+                self.main_pane.sashpos(0, width // 2)
+        except tk.TclError:
+            pass
+
     def _refresh_category_choices(self) -> None:
         categories = {
             contact.category
@@ -344,7 +374,16 @@ class DigitalRolodexApp:
                 "",
                 tk.END,
                 iid=email,
-                values=(contact.name or "", email, contact.phone_num or ""),
+                values=(
+                    contact.name or "",
+                    email,
+                    contact.phone_num or "",
+                    iso_to_display_date(contact.birth_date),
+                    contact.category or "",
+                    "Yes" if contact.favorite else "No",
+                    contact.address or "",
+                    contact.notes or "",
+                ),
             )
 
         if select_email and self.contact_tree.exists(select_email):
