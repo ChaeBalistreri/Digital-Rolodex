@@ -1,0 +1,13 @@
+[
+    {
+        "name": "C Bal",
+        "address": "123 Street Road Austin, TX 12345",
+        "phone_num": "5551234567",
+        "email": "CB@me.me",
+        "birth_date": "1990-01-01",
+        "tags": [
+            "friend",
+            "self"
+        ]
+    }
+]

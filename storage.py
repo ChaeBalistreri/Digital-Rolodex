@@ -75,6 +75,25 @@ def load_contacts(file_path: str) -> List[Contact]:
                         c.name or "<unknown>",
                     )
                     continue
+                if not Contact.is_valid_email(c.email):
+                    logger.warning(
+                        "Skipping contact '%s' due to invalid email: %s.",
+                        c.name or "<unknown>",
+                        c.email,
+                    )
+                    continue
+                if not Contact.is_valid_phone(c.phone_num):
+                    logger.warning(
+                        "Skipping contact '%s' due to invalid phone number.",
+                        c.name or "<unknown>",
+                    )
+                    continue
+                if not Contact.is_valid_birth_date(c.birth_date):
+                    logger.warning(
+                        "Skipping contact '%s' due to invalid birth date.",
+                        c.name or "<unknown>",
+                    )
+                    continue
 
                 contacts.append(c)
             except Exception as e:

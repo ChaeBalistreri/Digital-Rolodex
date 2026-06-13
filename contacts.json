@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "name": "Chae Bal",
+        "address": "123 Main St 75123",
+        "phone_num": "(555) 789-0123",
+        "email": "CB@me.com",
+        "birth_date": "1990-06-25",
+        "category": "Friends",
+        "notes": "Testing the note feature",
+        "favorite": false,
+        "tags": []
+    }
+]
