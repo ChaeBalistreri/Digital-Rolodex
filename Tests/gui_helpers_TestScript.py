@@ -16,6 +16,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from gui import (
+    DigitalRolodexApp,
     display_to_iso_date,
     format_birthday_for_entry,
     format_phone_for_entry,
@@ -23,12 +24,28 @@ from gui import (
     load_custom_categories,
     save_custom_categories,
 )
+from contact import Contact
 
 
 def ensure_artifacts_dir() -> str:
     artifacts = os.path.join(CURRENT_DIR, "_artifacts")
     os.makedirs(artifacts, exist_ok=True)
     return artifacts
+
+
+class SortVarStub:
+    def __init__(self, value: str) -> None:
+        self.value = value
+
+    def get(self) -> str:
+        return self.value
+
+
+def sorted_names_for(label: str, contacts: list[Contact], descending: bool = False) -> list[str]:
+    app = DigitalRolodexApp.__new__(DigitalRolodexApp)
+    app.sort_var = SortVarStub(label)
+    app.sort_descending = descending
+    return [contact.name for contact in app._sort_contacts(contacts)]
 
 
 def main() -> None:
@@ -59,6 +76,19 @@ def main() -> None:
     save_custom_categories(["Friends", "Alumni", "Friends"], file_path=categories_file)
     assert load_custom_categories(file_path=categories_file) == ["Alumni", "Friends"]
     print("Category persistence helpers passed")
+
+    contacts = [
+        Contact(name="Bailey", email="b@example.com", birth_date="2000-03-02", category="Work", favorite=False),
+        Contact(name="Alex", email="c@example.com", birth_date="1999-01-01", category="Family", favorite=True),
+        Contact(name="Casey", email="a@example.com", birth_date=None, category="School", favorite=False),
+    ]
+    assert sorted_names_for("Name", contacts) == ["Alex", "Bailey", "Casey"]
+    assert sorted_names_for("Name", contacts, descending=True) == ["Casey", "Bailey", "Alex"]
+    assert sorted_names_for("Email", contacts) == ["Casey", "Bailey", "Alex"]
+    assert sorted_names_for("Birthday", contacts) == ["Alex", "Bailey", "Casey"]
+    assert sorted_names_for("Category", contacts) == ["Alex", "Casey", "Bailey"]
+    assert sorted_names_for("Favorite", contacts, descending=True) == ["Alex", "Bailey", "Casey"]
+    print("Contact sorting helpers passed")
 
     print("All GUI helper tests completed.")
 

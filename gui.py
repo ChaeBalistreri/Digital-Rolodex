@@ -120,6 +120,7 @@ class DigitalRolodexApp:
 
         self.search_var = tk.StringVar()
         self.sort_var = tk.StringVar(value="Name")
+        self.sort_descending = False
         self.category_filter_var = tk.StringVar(value="All")
         self.status_var = tk.StringVar()
 
@@ -208,7 +209,7 @@ class DigitalRolodexApp:
         sort_box = ttk.Combobox(
             controls,
             textvariable=self.sort_var,
-            values=["Name", "Birthday", "Category"],
+            values=["Name", "Email", "Birthday", "Category", "Favorite"],
             state="readonly",
             width=12,
         )
@@ -241,6 +242,13 @@ class DigitalRolodexApp:
 
         columns = ("name", "email", "phone", "birthday", "category", "favorite", "address", "notes")
         self.contact_tree = ttk.Treeview(tree_frame, columns=columns, show="headings", selectmode="browse")
+        self.sortable_contact_columns = {
+            "name": "Name",
+            "email": "Email",
+            "birthday": "Birthday",
+            "category": "Category",
+            "favorite": "Favorite",
+        }
         self.contact_tree.heading("name", text="Name")
         self.contact_tree.heading("email", text="Email")
         self.contact_tree.heading("phone", text="Phone")
@@ -259,6 +267,7 @@ class DigitalRolodexApp:
         self.contact_tree.column("notes", width=320, minwidth=180, anchor="w", stretch=False)
         self.contact_tree.grid(row=0, column=0, sticky="nsew")
         self.contact_tree.bind("<<TreeviewSelect>>", self._on_contact_selected)
+        self.contact_tree.bind("<Double-1>", self._on_contact_heading_double_click)
 
         y_scrollbar = ttk.Scrollbar(tree_frame, orient=tk.VERTICAL, command=self.contact_tree.yview)
         y_scrollbar.grid(row=0, column=1, sticky="ns")
@@ -364,6 +373,7 @@ class DigitalRolodexApp:
             self.category_filter_var.set("All")
 
     def _refresh_contact_list(self, select_email: Optional[str] = None) -> None:
+        self._update_contact_sort_headings()
         for row in self.contact_tree.get_children():
             self.contact_tree.delete(row)
 
@@ -393,23 +403,62 @@ class DigitalRolodexApp:
         self._set_status(f"Showing {len(contacts)} contacts.")
 
     def _get_filtered_contacts(self) -> list[Contact]:
-        sort_map = {"Name": "name", "Birthday": "birth_date", "Category": "category"}
-        sort_by = sort_map.get(self.sort_var.get(), "name")
         query = self.search_var.get().strip()
         if query:
             contacts = self.rolodex.search_contacts(
                 query,
                 fields=("name", "email", "phone_num", "address", "birth_date", "category", "notes", "tags"),
             )
-            contacts = sorted(contacts, key=lambda c: (getattr(c, sort_by, None) or "").lower())
         else:
-            contacts = self.rolodex.list_contacts(sort_by=sort_by)
+            contacts = self.rolodex.list_contacts()
 
         category = self.category_filter_var.get()
         if category and category != "All":
             key = category.lower()
             contacts = [c for c in contacts if (c.category or "").lower() == key]
-        return contacts
+        return self._sort_contacts(contacts)
+
+    def _sort_contacts(self, contacts: list[Contact]) -> list[Contact]:
+        sort_by = self._current_sort_attribute()
+
+        def has_sort_value(contact: Contact) -> bool:
+            if sort_by == "favorite":
+                return True
+            return bool(getattr(contact, sort_by, None))
+
+        def sort_key(contact: Contact):
+            if sort_by == "favorite":
+                return 1 if contact.favorite else 0
+            value = getattr(contact, sort_by, None)
+            return (value or "").lower() if isinstance(value, str) else (value or "")
+
+        present = [contact for contact in contacts if has_sort_value(contact)]
+        missing = [contact for contact in contacts if not has_sort_value(contact)]
+        return sorted(present, key=sort_key, reverse=self.sort_descending) + missing
+
+    def _current_sort_attribute(self) -> str:
+        sort_map = {
+            "Name": "name",
+            "Email": "email",
+            "Birthday": "birth_date",
+            "Category": "category",
+            "Favorite": "favorite",
+        }
+        return sort_map.get(self.sort_var.get(), "name")
+
+    def _update_contact_sort_headings(self) -> None:
+        for column, label in self.sortable_contact_columns.items():
+            self.contact_tree.heading(column, text=label)
+
+    def _sort_column_from_label(self, label: str) -> str:
+        column_map = {
+            "Name": "name",
+            "Email": "email",
+            "Birthday": "birthday",
+            "Category": "category",
+            "Favorite": "favorite",
+        }
+        return column_map.get(label, "name")
 
     def _populate_detail_panel(self, contact: Optional[Contact]) -> None:
         self.selected_contact = contact
@@ -464,6 +513,26 @@ class DigitalRolodexApp:
         self._refresh_contact_list()
 
     def _on_sort_changed(self, _event=None) -> None:
+        self.sort_descending = False
+        self._refresh_contact_list()
+
+    def _on_contact_heading_double_click(self, event) -> None:
+        if self.contact_tree.identify_region(event.x, event.y) != "heading":
+            return
+        column_id = self.contact_tree.identify_column(event.x)
+        try:
+            column = self.contact_tree["columns"][int(column_id.replace("#", "")) - 1]
+        except (IndexError, ValueError):
+            return
+        if column not in self.sortable_contact_columns:
+            return
+
+        label = self.sortable_contact_columns[column]
+        if self.sort_var.get() == label:
+            self.sort_descending = not self.sort_descending
+        else:
+            self.sort_var.set(label)
+            self.sort_descending = False
         self._refresh_contact_list()
 
     def _on_category_filter_changed(self, _event=None) -> None:
@@ -874,15 +943,24 @@ class BirthdayWindow:
         ttk.Button(controls, text="Refresh", command=self._refresh).pack(side=tk.LEFT, padx=(10, 0))
         ttk.Button(controls, text="Close", command=self.window.destroy).pack(side=tk.RIGHT)
 
+        tree_frame = ttk.Frame(frame)
+        tree_frame.grid(row=1, column=0, sticky="nsew")
+        tree_frame.columnconfigure(0, weight=1)
+        tree_frame.rowconfigure(0, weight=1)
+
         columns = ("name", "birthday", "days")
-        self.tree = ttk.Treeview(frame, columns=columns, show="headings")
+        self.tree = ttk.Treeview(tree_frame, columns=columns, show="headings")
         self.tree.heading("name", text="Name")
         self.tree.heading("birthday", text="Birthday")
         self.tree.heading("days", text="Days Away")
         self.tree.column("name", width=220, anchor="w")
         self.tree.column("birthday", width=140, anchor="w")
         self.tree.column("days", width=90, anchor="center")
-        self.tree.grid(row=1, column=0, sticky="nsew")
+        self.tree.grid(row=0, column=0, sticky="nsew")
+
+        y_scrollbar = ttk.Scrollbar(tree_frame, orient=tk.VERTICAL, command=self.tree.yview)
+        y_scrollbar.grid(row=0, column=1, sticky="ns")
+        self.tree.configure(yscrollcommand=y_scrollbar.set)
 
     def _refresh(self) -> None:
         for row in self.tree.get_children():
